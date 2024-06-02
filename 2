@@ -1,0 +1,100 @@
+EXP NO: 2(i) COMPARISON OF TWO STRINGS USING SHELL PROGRAM
+AIM:
+To write a shell program to compare the two strings.
+ALGORITHM:
+1. Enter into the vi editor and go to the insert mode for entering the code
+2. Read the first string.
+3. Read the second string
+4. Compare the two strings using the if loop
+5. If the condition satisfies then print that two strings are equal else print two
+strings are not equal.
+6. Enter into the escape mode for the execution of the result and verify the output
+PROGRAM:
+#!/bin/bash
+echo "Enter the first String : "
+read str1
+echo "Enter the second String : "
+read str2
+if [ $str1 = $str2 ]
+then
+echo "Strings are Equal"
+else
+echo "Strings are Unequal"
+fi
+
+
+EXP NO: 2(ii) MAXIMUM OF THREE NUMBERS USING SHELL PROGRAM
+AIM:
+To write a shell program to find greatest of three numbers.
+ALGORITHM:
+1. Declare the three variables.
+2. Check if A is greater than B and C.
+3. If so, print A is greater.
+4. Else check if B is greater than C.
+5. If so, print B is greater.
+6. Else print C is greater.
+PROGRAM:
+#!/bin/bash
+echo "Enter A : "
+read a
+echo "Enter B : "
+read b
+echo "Enter C : "
+read c
+if [ $a -gt $b -a $a -gt $c ]
+then
+echo "A is greater"
+elif [ $b -gt $a -a $b -gt $c ]
+then
+echo "B is greater"
+else
+echo "C is greater"
+fi
+EXP NO: 2(iii) MULTIPLICATION TABLE USING SHELL PROGRAM
+AIM:
+To write the shell program to check whether the number is odd or even.
+ALGORITHM:
+Step 1: Start the program
+Step 2: Get the input, use a for loop to read numbers in the range from 1 to 10
+Step 3: Calculate the result
+Step 4: Increment the variable and repeat
+Step 5: Display the result.
+Step 6: Terminate the program.
+PROGRAM:
+#!/bin/bash
+echo "which number to generate multiplication table"
+read number
+i=1
+while [ $i -le 10 ]
+do
+echo "$number * $i =`expr $number \* $i ` "
+i=`expr $i + 1`
+done
+
+
+
+
+
+EXP NO: 2(iv) BASIC ARITHMETIC OPERATION USING SHELL PROGAMMING
+AIM:
+To write the shell program to perform the basic arithmetic operations.
+ALGORITHM:
+Step 1: Start the program.
+Step 2: Read the inputs
+Step 3: Perform the arithmetic calculation.
+Step 4: Print the result.
+Step 5: Stop the execution.
+PROGRAM:
+#!/bin/bash
+echo "Enter value A :"
+read a
+echo "enter value B : "
+read b
+c=`expr $a + $b`
+echo "sum:"$c
+c=`expr $a - $b`
+echo "sub:"$c
+c=`expr $a \* $b`
+echo "mul:"$c
+c=`expr $a / $b`
+echo "div:"$c
